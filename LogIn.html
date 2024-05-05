@@ -13,12 +13,14 @@
             padding: 0;
         }
         .main{
-            width: 100%;
-            background: linear-gradient(to top, rgba(212, 118, 118, 0.5)50%,rgba(229, 133, 133, 0.5)50%); background-image: url(https://i.pinimg.com/564x/aa/d1/90/aad1905b5e6ed1999e6f744636988fb1.jpg?fbclid=IwZXh0bgNhZW0CMTAAAR3P84QH29jIzFkU872rr288Zl-2_iTC_eXouiCumswP3Mi86R70hTLljL8_aem_AWeVW73cuRNrGEJuK9_GMiX0emSZZHoG1oWMXJPllM4Ru08A66xRJq15m2ZsBcQZtcJBdeKjV_iHJCJv5gkkdMGz);
+            background: linear-gradient(to bottom, rgba(212, 118, 118, 0.5)50%,rgba(229, 133, 133, 0.5)50%); background-image: url(https://i.pinimg.com/564x/aa/d1/90/aad1905b5e6ed1999e6f744636988fb1.jpg?fbclid=IwZXh0bgNhZW0CMTAAAR3P84QH29jIzFkU872rr288Zl-2_iTC_eXouiCumswP3Mi86R70hTLljL8_aem_AWeVW73cuRNrGEJuK9_GMiX0emSZZHoG1oWMXJPllM4Ru08A66xRJq15m2ZsBcQZtcJBdeKjV_iHJCJv5gkkdMGz);
             background-size: cover;
             background-position: center;
-            height: 110vh;
-            width: 210vh;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
         }
         .logInBox{
             width: 40%;
@@ -39,6 +41,7 @@
             margin-top: 30px;
             margin-bottom: 50px;
             font-size: 50px;
+            font-family: 'Courier New', Courier, monospace;
         }
         .UserName{
             width: 70%;
@@ -57,6 +60,7 @@
             font-weight: bold;
             font-size: 20px;
             flex: 1;
+            font-family: 'Courier New', Courier, monospace;
 
         }
         .UserLogo{
@@ -136,11 +140,13 @@
             background-color: pink;
         }
         .SocLogo{
-            align-content: center;
+            justify-content: center;
             mix-blend-mode: darken;
             display: flex;
             height:auto;
             cursor: pointer;
+            width: 15%;
+            aspect-ratio: 0/1;
             
         }
         .SocContainer{
@@ -160,11 +166,6 @@
             margin-left: 2px;
             justify-content: center;
         }
-        
-        
-
-        
-
     </style>
     <body>
         <div class="main">
