@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background: linear-gradient(to bottom, rgba(226, 120, 120, 0.5)50%,rgba(229, 133, 133, 0.5)50%); background-image: url(https://i.pinimg.com/564x/aa/d1/90/aad1905b5e6ed1999e6f744636988fb1.jpg?fbclid=IwZXh0bgNhZW0CMTAAAR3P84QH29jIzFkU872rr288Zl-2_iTC_eXouiCumswP3Mi86R70hTLljL8_aem_AWeVW73cuRNrGEJuK9_GMiX0emSZZHoG1oWMXJPllM4Ru08A66xRJq15m2ZsBcQZtcJBdeKjV_iHJCJv5gkkdMGz);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+.logInBox{
+    width: 40%;
+    height:100%;
+    left: 50%;
+    right: 20%;
+    top: 50px;
+    position: relative;
+    border-radius: 25px;
+    border: 5px solid black;
+    bottom: 50px;
+}
+.logInText{
+    top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.UserName{
+    width: 70%;
+    height: 90%;
+    border: 2px solid #000;
+    border-radius: 30px;
+    top: 20%;
+    right: 40%;
+    left: 17%;
+    position: relative;
+    margin-bottom: 30px;
+}
+.userText{
+    margin: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    flex: 1;
+    font-family: 'Courier New', Courier, monospace;
+}
+.UserLogo{
+    mix-blend-mode: darken;
+    border-radius: 80px;
+    right: 20%;
+    left: 8%;
+    margin: 3%;
+    display: flex;
+}
+.Password{
+    width: 70%;
+    height: 90%;
+    border: 2px solid #000;
+    border-radius: 30px;
+    top: 20%;
+    right: 40%;
+    left: 17%;
+    position: relative;
+    margin-bottom: 30px;
+}
+.PassText{
+    margin: 10px;
+    color: #000;
+    font-weight: bold;
+    flex: 1;
+    font-size: 20px;
+}
+.PassLogo{
+    mix-blend-mode: darken;
+    border-radius: 80px;
+    right: 40%;
+    left: 17%;
+    margin: 3%;
+    display: flex;
+} 
+.ButtonLogIn{
+    width: 40%;
+    height: 90%;
+    background-color: peachpuff;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    transition: background-color o.7 ease;
+}
+.ButtonSignUp{
+    width: 40%;
+    height: 90%;
+    background-color: peachpuff;
+    color: pink;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.7 ease;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    gap: 15px;
+}
+.buttonText{
+    margin: 10px;
+    color: #000;
+    font-weight: bold;
+    flex: 1;
+    font-size: 19px;
+    text-align: center;
+}
+.ButtonSignUp:hover{
+    background-color: pink;
+}
+.SocLogo{
+    justify-content: center;
+    mix-blend-mode: darken;
+    display: flex;
+    height:auto;
+    cursor: pointer;
+    width: 15%;            
+}
+.SocContainer{
+    display: flex;
+    gap: 30px;
+    margin: 8%;
+    justify-content: center;
+}
+.circle{
+    width: 15px;
+    height: 15px;
+    background-color: #bbb;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top:15px;
+    margin-right: 1px;
+    margin-left: 2px;
+    justify-content: center;
+}
