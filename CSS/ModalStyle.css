@@ -1,0 +1,219 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+
+.detailsbox {
+  border: 1px solid black;
+  display:grid;
+  width: auto;
+  text-align: center;
+  margin:10%;
+}
+.detBox b3, b4{
+  border: 1px solid black;
+  padding-bottom: 5% ;
+  text-align: center;
+  display:grid;
+}
+#detailsbox b5, b6 {
+    border: 1px solid black;
+    padding-bottom: 5% ;
+    display:grid;
+}
+.detailsbox  label {
+  display: inline;
+  justify-content: center;
+  size: 13px;
+  font-weight: 600;
+}
+label {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  padding-bottom: 5%;
+}
+
+input {
+  cursor: text;
+  background-color: #fae6e5;
+  flex-grow: 3; /* Make the input container take up the remaining space */
+  margin-right: 25%;
+  margin-bottom: -20px;
+  max-width: fit-content;
+  text-transform: uppercase;
+
+}
+
+.block {
+  /*this will contain the input and label for alignment*/
+  display:contents;
+  align-items: center;
+  border: none;
+  width: 50px;
+  padding-bottom: 20%;
+}
+
+.block1 {
+  float: right;
+  width: auto;
+  padding: 5% 10%;
+}
+
+input[type=text]:focus {
+  background-color: papayawhip;
+}
+
+::placeholder {
+  color: #222;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+select {
+  color: #222;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 17px;
+  background-color: #fae6e5;
+}
+
+.detailsbox h2 {
+  color: #e2675c;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+
+
+button {
+  width: 40%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #dd88aa;
+  font-size: 1em;
+  font-weight: bold;
+  top: 50px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: .2s ease-in;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: #222;
+}
+
+.block2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding-bottom: 1%;
+}
+
+.btn {
+  width: 30%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #dd90af;
+  font-size: 1em;
+  font-weight: bold;
+  top: 50px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: .2s ease-in;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.block3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 50px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        background-color: #fefefe7d;
+        margin: auto;
+        padding-top: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+      }
+      
+      /* Add Animation */
+      @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+      }
+      
+      @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+      }
+      
+      /* The Close Button */
+      .close-btn {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close-btn:hover,
+      .close-btn:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .inner-div1, .inner-div2, .inner-div3, .inner-div4 {
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+      }
+      
+      

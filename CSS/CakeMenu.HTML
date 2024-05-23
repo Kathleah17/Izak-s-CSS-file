@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes Menu</title>
+    <link rel="stylesheet" href="AddStyle.css">
+    <link rel="stylesheet" href="izakscss.css">
+    <link rel="stylesheet" href="ModalStyle.css">
+
+</head>
+<script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+</script>
+
+<body class="Menubody">
+    
+    <div class="topnav" >
+        <a href="section.html" class="active">HOME</a>
+        <a href="CookiesMenu.html">PRODUCT</a>
+        <a href="CART.html">CART</a>
+        <a href="#about">PROFILE</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+
+    <section class="AboutSec">
+        <div id="mySidenav" class="sidenav">
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 60;">Product List:</h1>
+            <span>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="CookiesMenu.html">Cookies</a>
+                <a href="CakeMenu.HTML">Cake</a>
+                <a href="Brownies.html">Brownies</a>
+                <a href="Cupcake.html">Cupcakes</a>
+            </span>
+        </div>
+        <!-- Use any element to open the sidenav -->
+        <span onclick="openNav()">
+            <i style='font-size:24px' class='fas'>&#xf101;</i>Product
+        </span>
+
+        <div class="Abt">
+            <h1>Cakes<span>Elegant Cakes for Extraordinary Occasions</span></h1> 
+            <h2>CHOCOLATE MOIST CAKE</h2>       
+        </div>
+            <img src="special.jpg" alt="image">
+    </section>
+
+    <div class="list">
+                <div class="item" data-id="0" data-price="1200">
+                    <img src="customize5.jpg" alt="Lights" onclick="myFunction(this);">
+                    <div class="title">6"x 5"</div>
+                    <div class="price">1200.00</div>
+                    <div class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close-btn">&times;</span>
+                        <div class="detailsbox">
+                            <h2>Cake Details:</h2>
+                              <div class="inner-div1">
+                            <div class="detailsbox b3 ">
+                                    <div class=" label">
+                                        <h2>Cake Flavor:</h2>
+                                    </div>
+                                    <input type="radio" name="cake-flavor" value="Chocolate Cake" id="chocolate" data-price="0"> Chocolate Cake
+                                    <input type="radio" name="cake-flavor" value="Vanilla Butter" id="vanilla" data-price="0"> Vanilla Butter
+                                    <input type="radio" name="cake-flavor" value="Mocha Almond" id="mocha" data-price="0"> Mocha Almond
+                                    <input type="radio" name="cake-flavor" value="Mango Butter" id="mango" data-price="0"> Mango Butter
+                            </div>
+                          </div>
+                          <div class="inner-div2">
+                            <div class=" detailsbox b4">
+                                <div class=" label">
+                                    <h2>Cake Design:</h2>
+                                </div>
+                                <input type="radio" name="cake-design" value="Buttercream" id="buttercream" data-price="0"> Buttercream
+                                <input type="radio" name="cake-design" value="Fondant Sculpted" id="fondant" data-price="100"> Fondant Sculpted
+                                <input type="radio" name="cake-design" value="Naked Icake" id="naked" data-price="50"> Naked Icake
+                                <input type="radio" name="cake-design" value="Drip" id="drip" data-price="75"> Drip
+                                <input type="radio" name="cake-design" value="Ombre" id="ombre" data-price="100"> Ombre
+                      </div>
+                          </div>
+                            <div class="inner-div3">
+                                <div class="detailsbox b5">
+                                    <h2>Payment Details</h2>
+                                    <div>
+                                        <label>Payment Method:</label>
+                                        <select name="payment-method" id="payment-method">
+                                            <option value="Cash">Cash</option>
+                                            <option value="Gcash">Gcash</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                          <div class="inner-div4">
+                            <div class="detBox b6">
+                                <h2>Delivery Details</h2>
+                                <div>
+                                        <label>Name:</label>
+                                        <input type="text" name="name" id="name">
+                                    </div>
+                                    <div>
+                                        <label>Phone Number:</label>
+                                        <input type="tel" name="phone" id="phone">
+                                    </div>
+                                    <div>
+                                        <label>Date of Delivery:</label>
+                                        <input type="date" name="delivery-date" id="delivery-date">
+                                    </div>
+                                    <div>
+                                        <label>Comment:</label><br>
+                                        <textarea name="comment" id="comment"></textarea>
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="inner-7">
+                            <section>
+                                <h2>Order Summary</h2>
+                                <div>
+                                    <label>Total of Order/s:</label>
+                                    <span id="total-orders">0</span>
+                                </div>
+                                <div>
+                                    <label>Total Amount:</label>
+                                    <span id="total-amount">₱0.00</span>
+                                </div>
+                            </section>
+                        </form>
+                    
+                        <div id="receipt-container" style="display: none;">
+                            <h2>Receipt</h2>
+                            <div id="receipt-content"></div>
+                        </div>
+                    </div>
+                    <button onclick="addToCard(this)">Add To Card</button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- The Button to trigger the modal -->
+                      <button id="modal-btn">ADD TO CART</button>
+                    </div>  
+                    
+        <div class="item" data-id="2" data-price="1600">
+                <img src="customize2.jpg">
+                <div class="title">8"x 5"</div>
+                <div class="price">1600.00</div>
+                <div class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close-btn">&times;</span>
+                    <div class="detailsbox">
+                        <h2>Cake Details:</h2>
+                          <div class="inner-div1">
+                        <div class="detailsbox b3 ">
+                                <div class=" label">
+                                    <h2>Cake Flavor:</h2>
+                                </div>
+                                <input type="radio" name="cake-flavor" value="Chocolate Cake" id="chocolate" data-price="0"> Chocolate Cake
+                                <input type="radio" name="cake-flavor" value="Vanilla Butter" id="vanilla" data-price="0"> Vanilla Butter
+                                <input type="radio" name="cake-flavor" value="Mocha Almond" id="mocha" data-price="0"> Mocha Almond
+                                <input type="radio" name="cake-flavor" value="Mango Butter" id="mango" data-price="0"> Mango Butter
+                        </div>
+                      </div>
+                      <div class="inner-div2">
+                        <div class=" detailsbox b4">
+                            <div class=" label">
+                                <h2>Cake Design:</h2>
+                            </div>
+                            <input type="radio" name="cake-design" value="Buttercream" id="buttercream" data-price="0"> Buttercream
+                            <input type="radio" name="cake-design" value="Fondant Sculpted" id="fondant" data-price="100"> Fondant Sculpted
+                            <input type="radio" name="cake-design" value="Naked Icake" id="naked" data-price="50"> Naked Icake
+                            <input type="radio" name="cake-design" value="Drip" id="drip" data-price="75"> Drip
+                            <input type="radio" name="cake-design" value="Ombre" id="ombre" data-price="100"> Ombre
+                  </div>
+                      </div>
+                        <div class="inner-div3">
+                            <div class="detailsbox b5">
+                                <h2>Payment Details</h2>
+                                <div>
+                                    <label>Payment Method:</label>
+                                    <select name="payment-method" id="payment-method">
+                                        <option value="Cash">Cash</option>
+                                        <option value="Gcash">Gcash</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                
+                      <div class="inner-div4">
+                        <div class="detBox b6">
+                            <h2>Delivery Details</h2>
+                            <div>
+                                    <label>Name:</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div>
+                                    <label>Phone Number:</label>
+                                    <input type="tel" name="phone" id="phone">
+                                </div>
+                                <div>
+                                    <label>Date of Delivery:</label>
+                                    <input type="date" name="delivery-date" id="delivery-date">
+                                </div>
+                                <div>
+                                    <label>Comment:</label><br>
+                                    <textarea name="comment" id="comment"></textarea>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="inner-7">
+                        <section>
+                            <h2>Order Summary</h2>
+                            <div>
+                                <label>Total of Order/s:</label>
+                                <span id="total-orders">0</span>
+                            </div>
+                            <div>
+                                <label>Total Amount:</label>
+                                <span id="total-amount">₱0.00</span>
+                            </div>
+                        </section>
+                    </form>
+                
+                    <div id="receipt-container" style="display: none;">
+                        <h2>Receipt</h2>
+                        <div id="receipt-content"></div>
+                    </div>
+                </div>
+                <button onclick="addToCard(this)">Add To Card</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- The Button to trigger the modal -->
+                  <button id="modal-btn">ADD TO CART</button>
+                </div>  
+                    
+        <div class="item" data-id="3" data-price="680">
+                <img src="customize3.jpg" alt="Lights" onclick="myFunction(this);">
+                <div class="title">6"x 3"</div>
+                <div class="price">680.00</div>
+                <div class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close-btn">&times;</span>
+                    <div class="detailsbox">
+                        <h2>Cake Details:</h2>
+                          <div class="inner-div1">
+                        <div class="detailsbox b3 ">
+                                <div class=" label">
+                                    <h2>Cake Flavor:</h2>
+                                </div>
+                                <input type="radio" name="cake-flavor" value="Chocolate Cake" id="chocolate" data-price="0"> Chocolate Cake
+                                <input type="radio" name="cake-flavor" value="Vanilla Butter" id="vanilla" data-price="0"> Vanilla Butter
+                                <input type="radio" name="cake-flavor" value="Mocha Almond" id="mocha" data-price="0"> Mocha Almond
+                                <input type="radio" name="cake-flavor" value="Mango Butter" id="mango" data-price="0"> Mango Butter
+                        </div>
+                      </div>
+                      <div class="inner-div2">
+                        <div class=" detailsbox b4">
+                            <div class=" label">
+                                <h2>Cake Design:</h2>
+                            </div>
+                            <input type="radio" name="cake-design" value="Buttercream" id="buttercream" data-price="0"> Buttercream
+                            <input type="radio" name="cake-design" value="Fondant Sculpted" id="fondant" data-price="100"> Fondant Sculpted
+                            <input type="radio" name="cake-design" value="Naked Icake" id="naked" data-price="50"> Naked Icake
+                            <input type="radio" name="cake-design" value="Drip" id="drip" data-price="75"> Drip
+                            <input type="radio" name="cake-design" value="Ombre" id="ombre" data-price="100"> Ombre
+                  </div>
+                      </div>
+                        <div class="inner-div3">
+                            <div class="detailsbox b5">
+                                <h2>Payment Details</h2>
+                                <div>
+                                    <label>Payment Method:</label>
+                                    <select name="payment-method" id="payment-method">
+                                        <option value="Cash">Cash</option>
+                                        <option value="Gcash">Gcash</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                
+                      <div class="inner-div4">
+                        <div class="detBox b6">
+                            <h2>Delivery Details</h2>
+                            <div>
+                                    <label>Name:</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div>
+                                    <label>Phone Number:</label>
+                                    <input type="tel" name="phone" id="phone">
+                                </div>
+                                <div>
+                                    <label>Date of Delivery:</label>
+                                    <input type="date" name="delivery-date" id="delivery-date">
+                                </div>
+                                <div>
+                                    <label>Comment:</label><br>
+                                    <textarea name="comment" id="comment"></textarea>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="inner-7">
+                        <section>
+                            <h2>Order Summary</h2>
+                            <div>
+                                <label>Total of Order/s:</label>
+                                <span id="total-orders">0</span>
+                            </div>
+                            <div>
+                                <label>Total Amount:</label>
+                                <span id="total-amount">₱0.00</span>
+                            </div>
+                        </section>
+                    </form>
+                
+                    <div id="receipt-container" style="display: none;">
+                        <h2>Receipt</h2>
+                        <div id="receipt-content"></div>
+                    </div>
+                </div>
+                <button onclick="addToCard(this)">Add To Card</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- The Button to trigger the modal -->
+                  <button id="modal-btn">ADD TO CART</button>
+                </div>  
+
+        <div class="item" data-id="4" data-price="780">
+                <img src="customize11.jpg" alt="Lights" onclick="myFunction(this);">
+                <div class="title">7"x 5"</div>
+                <div class="price">780.00</div>
+                <div class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close-btn">&times;</span>
+                    <div class="detailsbox">
+                        <h2>Cake Details:</h2>
+                          <div class="inner-div1">
+                        <div class="detailsbox b3 ">
+                                <div class=" label">
+                                    <h2>Cake Flavor:</h2>
+                                </div>
+                                <input type="radio" name="cake-flavor" value="Chocolate Cake" id="chocolate" data-price="0"> Chocolate Cake
+                                <input type="radio" name="cake-flavor" value="Vanilla Butter" id="vanilla" data-price="0"> Vanilla Butter
+                                <input type="radio" name="cake-flavor" value="Mocha Almond" id="mocha" data-price="0"> Mocha Almond
+                                <input type="radio" name="cake-flavor" value="Mango Butter" id="mango" data-price="0"> Mango Butter
+                        </div>
+                      </div>
+                      <div class="inner-div2">
+                        <div class=" detailsbox b4">
+                            <div class=" label">
+                                <h2>Cake Design:</h2>
+                            </div>
+                            <input type="radio" name="cake-design" value="Buttercream" id="buttercream" data-price="0"> Buttercream
+                            <input type="radio" name="cake-design" value="Fondant Sculpted" id="fondant" data-price="100"> Fondant Sculpted
+                            <input type="radio" name="cake-design" value="Naked Icake" id="naked" data-price="50"> Naked Icake
+                            <input type="radio" name="cake-design" value="Drip" id="drip" data-price="75"> Drip
+                            <input type="radio" name="cake-design" value="Ombre" id="ombre" data-price="100"> Ombre
+                  </div>
+                      </div>
+                        <div class="inner-div3">
+                            <div class="detailsbox b5">
+                                <h2>Payment Details</h2>
+                                <div>
+                                    <label>Payment Method:</label>
+                                    <select name="payment-method" id="payment-method">
+                                        <option value="Cash">Cash</option>
+                                        <option value="Gcash">Gcash</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                
+                      <div class="inner-div4">
+                        <div class="detBox b6">
+                            <h2>Delivery Details</h2>
+                            <div>
+                                    <label>Name:</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div>
+                                    <label>Phone Number:</label>
+                                    <input type="tel" name="phone" id="phone">
+                                </div>
+                                <div>
+                                    <label>Date of Delivery:</label>
+                                    <input type="date" name="delivery-date" id="delivery-date">
+                                </div>
+                                <div>
+                                    <label>Comment:</label><br>
+                                    <textarea name="comment" id="comment"></textarea>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="inner-7">
+                        <section>
+                            <h2>Order Summary</h2>
+                            <div>
+                                <label>Total of Order/s:</label>
+                                <span id="total-orders">0</span>
+                            </div>
+                            <div>
+                                <label>Total Amount:</label>
+                                <span id="total-amount">₱0.00</span>
+                            </div>
+                        </section>
+                    </form>
+                
+                    <div id="receipt-container" style="display: none;">
+                        <h2>Receipt</h2>
+                        <div id="receipt-content"></div>
+                    </div>
+                </div>
+                <button onclick="addToCard(this)">Add To Card</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- The Button to trigger the modal -->
+                  <button id="modal-btn">ADD TO CART</button>
+                </div>  
+        <div class="item" data-id="5" data-price="880">
+                <img src="minimalcake4.jpeg" alt="Lights" onclick="myFunction(this);">
+                <div class="title">8"x 5"</div>
+                <div class="price">880.00</div>
+                <div class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close-btn">&times;</span>
+                    <div class="detailsbox">
+                        <h2>Cake Details:</h2>
+                          <div class="inner-div1">
+                        <div class="detailsbox b3 ">
+                                <div class=" label">
+                                    <h2>Cake Flavor:</h2>
+                                </div>
+                                <input type="radio" name="cake-flavor" value="Chocolate Cake" id="chocolate" data-price="0"> Chocolate Cake
+                                <input type="radio" name="cake-flavor" value="Vanilla Butter" id="vanilla" data-price="0"> Vanilla Butter
+                                <input type="radio" name="cake-flavor" value="Mocha Almond" id="mocha" data-price="0"> Mocha Almond
+                                <input type="radio" name="cake-flavor" value="Mango Butter" id="mango" data-price="0"> Mango Butter
+                        </div>
+                      </div>
+                      <div class="inner-div2">
+                        <div class=" detailsbox b4">
+                            <div class=" label">
+                                <h2>Cake Design:</h2>
+                            </div>
+                            <input type="radio" name="cake-design" value="Buttercream" id="buttercream" data-price="0"> Buttercream
+                            <input type="radio" name="cake-design" value="Fondant Sculpted" id="fondant" data-price="100"> Fondant Sculpted
+                            <input type="radio" name="cake-design" value="Naked Icake" id="naked" data-price="50"> Naked Icake
+                            <input type="radio" name="cake-design" value="Drip" id="drip" data-price="75"> Drip
+                            <input type="radio" name="cake-design" value="Ombre" id="ombre" data-price="100"> Ombre
+                  </div>
+                      </div>
+                        <div class="inner-div3">
+                            <div class="detailsbox b5">
+                                <h2>Payment Details</h2>
+                                <div>
+                                    <label>Payment Method:</label>
+                                    <select name="payment-method" id="payment-method">
+                                        <option value="Cash">Cash</option>
+                                        <option value="Gcash">Gcash</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                
+                      <div class="inner-div4">
+                        <div class="detBox b6">
+                            <h2>Delivery Details</h2>
+                            <div>
+                                    <label>Name:</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div>
+                                    <label>Phone Number:</label>
+                                    <input type="tel" name="phone" id="phone">
+                                </div>
+                                <div>
+                                    <label>Date of Delivery:</label>
+                                    <input type="date" name="delivery-date" id="delivery-date">
+                                </div>
+                                <div>
+                                    <label>Comment:</label><br>
+                                    <textarea name="comment" id="comment"></textarea>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="inner-7">
+                        <section>
+                            <h2>Order Summary</h2>
+                            <div>
+                                <label>Total of Order/s:</label>
+                                <span id="total-orders">0</span>
+                            </div>
+                            <div>
+                                <label>Total Amount:</label>
+                                <span id="total-amount">₱0.00</span>
+                            </div>
+                        </section>
+                    </form>
+                
+                    <div id="receipt-container" style="display: none;">
+                        <h2>Receipt</h2>
+                        <div id="receipt-content"></div>
+                    </div>
+                </div>
+                <button onclick="addToCard(this)">Add To Card</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- The Button to trigger the modal -->
+                  <button id="modal-btn">ADD TO CART</button>
+                </div>  
+            
+           
+    </div> 
+    
+    <section class="SizeSec">
+        <img src="Cakesize.png">
+        <div class="Abt">
+            <h1>Cake Sizes Guide<span>From Mini to Maxi, We've got you covered!</span></h1>        
+        </div>
+    </section>
+
+    <section class="Specialflavor">
+        <div class="nineth">
+            <h1>Unique Cake Flavor<span>A symphony of Special Flavors!</span></h1>
+        </div>
+
+        <div class="menubody">
+            <div class="wrapper">
+                    <div class="blockcontainer">
+                            <div class="square tp-none" >
+                                <img  class="imgphoto" src="redvelvetCAKE.jpg" alt="image-1" /> 
+                                <div class="content">
+                                    RED VELVET CHEESECAKE <br>
+                                    1300.00
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blockcontainer">
+                            <div class="square tp-none" >
+                                <img  class="imgphoto" src="UbeCake.jpeg" alt="image-2" /> 
+                                <div class="content">
+                                    UBE MOIST CAKE<br>
+                                    1200.00
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="blockcontainer">
+                            <div class="square tp-none" >
+                                <img  class="imgphoto" src="MochaCoffeeCake.jpeg" alt="image-3" /> 
+                                <div class="content">
+                                    MOCHA MOIST CAKE <br>
+                                    1200.00
+                                </div>
+                            </div>
+                        </div>
+    </section>
+
+
+    <script src="modalScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brownies Menu</title>
+    <link rel="stylesheet" href="ModalStyle.css">
+
+    
+    
+</head>
+<style>
+    /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe7d;
+  margin: auto;
+  padding-top: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close-btn {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inner-div1, .inner-div2, .inner-div3, .inner-div4 {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+</style>
+
+
+<body>
+   <!-- The Modal -->
+   <div class="item" data-id="0" data-price="1200">
+    <img src="customize5.jpg" alt="Lights" onclick="myFunction(this);">
+    <div class="title">6"x 5"</div>
+    <div class="price">1200.00</div>
+<div class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+    <div class="detailsbox">
+        <h2>Cake Details:</h2>
+          <div class="inner-div1">
+        <div class="detailsbox b3 ">
+                <div class=" label">
+                    <h2>Cake Flavor:</h2>
+                </div>
+                <input type="radio" name="cake-flavor" value="Chocolate Cake" id="chocolate" data-price="0"> Chocolate Cake
+                <input type="radio" name="cake-flavor" value="Vanilla Butter" id="vanilla" data-price="0"> Vanilla Butter
+                <input type="radio" name="cake-flavor" value="Mocha Almond" id="mocha" data-price="0"> Mocha Almond
+                <input type="radio" name="cake-flavor" value="Mango Butter" id="mango" data-price="0"> Mango Butter
+        </div>
+      </div>
+      <div class="inner-div2">
+        <div class=" detailsbox b4">
+            <div class=" label">
+                <h2>Cake Design:</h2>
+            </div>
+            <input type="radio" name="cake-design" value="Buttercream" id="buttercream" data-price="0"> Buttercream
+            <input type="radio" name="cake-design" value="Fondant Sculpted" id="fondant" data-price="100"> Fondant Sculpted
+            <input type="radio" name="cake-design" value="Naked Icake" id="naked" data-price="50"> Naked Icake
+            <input type="radio" name="cake-design" value="Drip" id="drip" data-price="75"> Drip
+            <input type="radio" name="cake-design" value="Ombre" id="ombre" data-price="100"> Ombre
+  </div>
+      </div>
+        <div class="inner-div3">
+            <div class="detailsbox b5">
+                <h2>Payment Details</h2>
+                <div>
+                    <label>Payment Method:</label>
+                    <select name="payment-method" id="payment-method">
+                        <option value="Cash">Cash</option>
+                        <option value="Gcash">Gcash</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+      <div class="inner-div4">
+        <div class="detBox b6">
+            <h2>Delivery Details</h2>
+            <div>
+                    <label>Name:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label>Phone Number:</label>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                <div>
+                    <label>Date of Delivery:</label>
+                    <input type="date" name="delivery-date" id="delivery-date">
+                </div>
+                <div>
+                    <label>Comment:</label><br>
+                    <textarea name="comment" id="comment"></textarea>
+                </div>
+            </div>
+      </div>
+      <div class="inner-7">
+        <section>
+            <h2>Order Summary</h2>
+            <div>
+                <label>Total of Order/s:</label>
+                <span id="total-orders">0</span>
+            </div>
+            <div>
+                <label>Total Amount:</label>
+                <span id="total-amount">₱0.00</span>
+            </div>
+        </section>
+    </form>
+
+    <div id="receipt-container" style="display: none;">
+        <h2>Receipt</h2>
+        <div id="receipt-content"></div>
+    </div>
+</div>
+<button onclick="addToCard(this)">Add To Card</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- The Button to trigger the modal -->
+  <button id="modal-btn">Open Modal</button>
+</div>
+
+</body>
+<script src="modalScript.js"></script>
+  </html>

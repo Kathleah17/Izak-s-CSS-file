@@ -1,0 +1,352 @@
+
+.Menubody{
+	display: absolute;
+	align-items: center;
+	width: 100%;
+	margin: 40%;
+    background-color: #f6b0bb;
+    font-family: system-ui;
+ }
+.AboutSec{ /*the About us section*/
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	background: #fde5fdda;
+	height: 30%;
+	background-size: cover;
+	width: 100%;
+}
+/*About Section Text*/
+
+   .AboutSec .Abt h1 {
+    padding: 25px 10px 10px;
+	text-align:center; font-size:50px; 
+    text-transform:uppercase; color:#222; 
+    letter-spacing:1px;
+	font-family:"Playfair Display", serif; font-weight:400;
+  }
+  .AboutSec .Abt h2 {
+    padding: 0px 5px 5px;
+	text-align:center; font-size:40px; 
+    text-transform:uppercase; color:#222; 
+    letter-spacing:1px;
+	font-family:"Playfair Display", serif; font-weight:bold;
+  }
+  .AboutSec .Abt h1 span {
+	margin-top: 6px;
+	  font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+	  text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+	  display: grid;
+	  grid-template-columns: 1fr max-content 1fr;
+	  grid-template-rows: 27px 0;
+	  grid-gap: 20px;
+	  align-items: center;
+  }
+  
+  .AboutSec .Abt h1 span:after,.Abt h1 span:before {
+	  content: " ";
+	  display: block;
+	  border-bottom: 1px solid #ccc;
+	  border-top: 1px solid #ccc;
+	  height: 5px;
+	background-color:#f8f8f8;
+    margin-left: -20px;
+    margin-right: 50px ;
+  }
+  .AboutSec  img{
+    height: 80vh;
+    object-fit: cover;
+    border-left: 8px dotted #cd4662;
+    width: 50%;
+  }
+  .AboutSec .img{
+    height: 80vh;
+    object-fit: cover;
+    border-left: 8px dotted #cd4662;
+    width: 50%;
+  }
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+header .shopping{
+    position: relative;
+    text-align: right;
+    cursor: pointer;
+}
+.shopping img{ /*Cart Logo*/
+    width: 40px;
+
+}
+header .shopping span{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+    margin: 80px 70px 50px 90px; /*top right buttom left*/
+}
+.list .item{
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 90%;
+    width: 90%;
+    height: 210px;
+    margin-bottom: 60%;
+
+}
+.list .item img{
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #cd4662;
+    cursor: pointer;
+    border-radius: 20px;
+    }
+.list .item .title{
+    font-weight: 700;
+
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    background-color: #ff8886;
+    color: #fff;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 5%;
+    text-align: center;
+}
+.list .item button:hover{
+    color: #0c0a0a;
+    background-color: #f86d68;
+    font-weight: bold;
+
+}
+.container{
+    /*the exapnding image container*/
+    position: relative;
+    display: none;
+}
+#imgText{
+    /*expanding image text*/
+    position: absolute;
+    bottom: 25%;
+    color: white;
+    font-size: 20px;
+    left: 15px;
+}
+.closetab{
+    /*cloasable button inside the image*/
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+}
+
+
+
+
+
+
+
+/*Add to cart na CSS ni Sya*/
+.card{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 500px;
+    background-color: #f6b0bb;
+    background:transparent;
+    backdrop-filter: blur(75px);
+    height: 100vh;
+    transition: 0.5s;
+}
+.active .card{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.card h1{
+    color: #cd4662;
+    font-weight:900;
+    margin-top: 20px;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.card .checkOut div{
+    background-color: #d18f8f;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.card .checkOut div:hover {
+    background-color: #f6b0bb;
+    transition: all;
+    color:#0c0a0a;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard li button{
+    background-color: #fff5;
+    border: none;
+}
+.listCard .count{
+    margin: 0 10px;
+}
+
+ul.breadcrumb {
+    display:flex;
+	align-items:self-start;
+	padding-top: 50%;
+    position: fixed;
+    
+}
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
+  .SizeSec{ /*the About us section*/
+	display:flex;
+	align-items:center;
+    justify-content: space-between;
+	background: #ffd6b9;
+	height: 30%;
+	background-size: cover;
+	width: 100%;
+}
+.SizeSec .Abt h1 {
+	text-align:center; font-size:50px; 
+    text-transform:uppercase; color:#222; 
+    letter-spacing:1px;
+	font-family:"Playfair Display", serif; font-weight:400;
+    padding-right: -30%;
+    margin-left: -20px;
+    margin-right: 40px;
+    padding-top: 50px;
+  }
+  .SizeSec .Abt h1 span {
+	margin-top: 6px;
+	  font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+	  text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+	  display: grid;
+	  grid-template-columns: 1fr max-content 1fr;
+	  grid-template-rows: 27px 0;
+	  grid-gap: 20px;
+	  align-items: left;
+
+  }
+  .SizeSec  img{
+    height: 80vh;
+    object-fit: cover;
+    border-right: 8px dotted #fb9280;
+    width: 50%;
+  }
+
+
+  .Specialflavor{ /*the  Special cakes  section*/
+	margin: 0;
+	padding: 0;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column;
+	background:#fabfba;
+	min-height: 80vh;
+	background-size: cover;
+	width: 100%;
+}
+
+.Specialflavor .nineth h1 {
+	margin-top: 10%;
+    margin-bottom: 15%;
+	text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+	font-family:"Playfair Display", serif; font-weight:400;
+  }
+  .Specialflavor .nineth h1 span {
+	  margin-top: 6px;
+	  font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+	  text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+	  display: grid;
+	  grid-template-columns: 1fr max-content 1fr;
+	  grid-template-rows: 27px 0;
+	  grid-gap: 20px;
+	  align-items: center;
+  }
+  
+  .Specialflavor .nineth h1 span:after,.nineth h1 span:before {
+	  content: " ";
+	  display: block;
+	  border-bottom: 1px solid #ccc;
+	  border-top: 1px solid #ccc;
+	  height: 5px;
+	background-color:#f8f8f8;
+  }
